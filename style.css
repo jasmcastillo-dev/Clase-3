@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+html, body { /* como no tiene nada la inicio, solo está buscando a este elemento */
+  margin: 0;
+  padding: 0;
+  background: blueviolet;
+  color: #000; /* de la tipografía */
+  font-family: Helvetica, Arial, sans-serif;
+}/* todo esto es parte de solo el body, se aplica solo ahí */
+
+a{ /* significa que todos los vínculos van a tener estas características */
+  color: darkblue;
+  font-weight: bold;
+  text-decoration: none; /* si le pongo el none significa que no tiene decoración*/
+}
+
+a[href$=".pdf"]{
+  color: orange;
+}
+
+a:hover{ /*"hover" significa que el elemento está en una situación particular */
+  color: darkred;
+  text-decoration: underline;
+  transition: all ease 1s;
+}
+
+a:hover:after{
+  content: ":)";
+}
+
+h1{ 
+  font-size: calc(2rem + 5vw); /* en este caso el tamaño se va calculando (tipo responsive)*/
+}
+
+h1, .destacado { /* La coma , indica que las reglas se aplican a ambos elementos por separado, Si no pusieras la coma, significaría los .destacado que están dentro de un <h1>*/
+  font-family: "Ranchers", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.destacado{ /* el punto es del class, que el final es el nombre de la etiqueta que debe de estar en el html */
+  color: blueviolet;
+}
+
+
+#bloque {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(80% - 4rem);
+    padding: 2rem;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    box-shadow: 0 0 30px black;
+    z-index: 9999;
+}
+
+
+/*canvas {
+  display: block;
+}*/
